@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Login to your HollowManRent account to access rental listings and manage your bookings." />
+  <title>Login – HollowManRent</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body class="page-login">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="bg-grain" aria-hidden="true"></div>
+
+  <main class="page-wrapper" role="main">
+    <div class="login-card" role="region" aria-labelledby="login-heading">
+
+      <div class="login-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+          <polyline points="10 17 15 12 10 7"/>
+          <line x1="15" y1="12" x2="3" y2="12"/>
+        </svg>
+      </div>
+
+      <h1 id="login-heading" class="login-title">Login</h1>
+      <p class="login-subtitle">Sign in to your HollowManRent account</p>
+
+      <div class="alert alert-error" id="form-alert" role="alert" aria-live="polite" hidden>
+        <span id="alert-message"></span>
+      </div>
+
+      <form id="login-form" class="login-form" novalidate aria-label="Login form">
+
+        <div class="field-group">
+          <label for="email" class="field-label">Email</label>
+          <div class="input-wrapper">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="field-input"
+              placeholder="you@example.com"
+              autocomplete="email"
+              aria-required="true"
+              aria-describedby="email-error"
+            />
+          </div>
+          <span class="field-error" id="email-error" role="alert" aria-live="polite"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="password" class="field-label">Password</label>
+          <div class="input-wrapper input-wrapper--password">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="field-input"
+              placeholder="Your password"
+              autocomplete="current-password"
+              aria-required="true"
+              aria-describedby="password-error"
+            />
+
+            <button
+              type="button"
+              class="toggle-pw"
+              id="toggle-pw"
+              aria-label="Show password"
+              tabindex="0"
+            >
+              <svg class="eye-icon eye-show" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+              <svg class="eye-icon eye-hide" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden>
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+                <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+                <line x1="1" y1="1" x2="23" y2="23"/>
+              </svg>
+            </button>
+          </div>
+          <span class="field-error" id="password-error" role="alert" aria-live="polite"></span>
+        </div>
+
+        <button type="submit" class="btn-signin" id="btn-signin" aria-label="Sign in to your account">
+          <span class="btn-label">Sign In</span>
+          <span class="btn-spinner" id="btn-spinner" aria-hidden="true" hidden></span>
+        </button>
+
+      </form>
+
+      <p class="register-prompt">
+        Don't have an account?
+        <a href="register.html" class="register-link" aria-label="Go to the registration page">Register here</a>
+      </p>
+
+    </div>
+  </main>
+
+    <script src="js/shared.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

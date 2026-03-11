@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse HollowManRent's fleet of reliable vehicles for rent across Nepal. Filter by type, fuel, and price." />
+  <title>Our Fleet – HollowManRent</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/listings.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body class="page-listings">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="navbar" id="navbar" role="banner">
+    <div class="nav-container">
+
+      <a href="home.html" class="nav-logo" aria-label="HollowManRent – Home">
+        <span class="nav-logo-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13" rx="2"/>
+            <path d="M16 8h4l3 3v5h-7V8z"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </span>
+        <span class="nav-logo-text"><span class="nav-logo-white">HOLLOW</span><span class="nav-logo-amber">MAN</span><span class="nav-logo-white">RENT</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="home.html"      class="nav-link ">Home</a>
+        <a href="about.html"     class="nav-link ">About</a>
+        <a href="listings.html"  class="nav-link active" aria-current="page">Fleet</a>
+        <a href="booking.html"   class="nav-link ">Booking</a>
+        <a href="pricing.html"   class="nav-link ">Pricing</a>
+        <a href="locations.html" class="nav-link ">Locations</a>
+        <a href="services.html"  class="nav-link ">Services</a>
+        <a href="blog.html"      class="nav-link ">Blog</a>
+        <a href="faq.html"       class="nav-link ">FAQ</a>
+        <a href="contact.html"   class="nav-link ">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="nav-login-btn" aria-label="Log in to your account">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+            <polyline points="10 17 15 12 10 7"/>
+            <line x1="15" y1="12" x2="3" y2="12"/>
+          </svg>
+          Login
+        </a>
+        <a href="booking.html" class="nav-book-btn" aria-label="Book a vehicle now">Book Now</a>
+      </div>
+
+      <button class="hamburger" id="hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu">
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+        <span class="ham-bar"></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" role="navigation"
+      aria-label="Mobile navigation" hidden>
+      <a href="home.html"      class="mob-link ">Home</a>
+      <a href="about.html"     class="mob-link ">About</a>
+      <a href="listings.html"  class="mob-link active" aria-current="page">Fleet</a>
+      <a href="booking.html"   class="mob-link ">Booking</a>
+      <a href="pricing.html"   class="mob-link ">Pricing</a>
+      <a href="locations.html" class="mob-link ">Locations</a>
+      <a href="services.html"  class="mob-link ">Services</a>
+      <a href="blog.html"      class="mob-link ">Blog</a>
+      <a href="faq.html"       class="mob-link ">FAQ</a>
+      <a href="contact.html"   class="mob-link ">Contact</a>
+      <div class="mob-actions">
+        <a href="login.html"   class="nav-login-btn w-full">Login</a>
+        <a href="booking.html" class="nav-book-btn w-full">Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" role="main">
+
+    <section class="fleet-header" aria-labelledby="fleet-heading">
+      <div class="fleet-header-inner">
+        <h1 id="fleet-heading" class="fleet-title">Our <span class="accent-word">Fleet</span></h1>
+        <p class="fleet-subtitle">Browse our collection of reliable vehicles suited for Nepal's roads.</p>
+      </div>
+    </section>
+
+    <section class="filters-bar" aria-label="Filter and search vehicles">
+      <div class="filters-container">
+
+        <div class="search-wrap">
+          <label for="search-input" class="sr-only">Search vehicles</label>
+          <span class="search-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </span>
+          <input
+            type="search"
+            id="search-input"
+            class="search-input"
+            placeholder="Search vehicles…"
+            aria-label="Search vehicles by name"
+          />
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-type" class="filter-label">Type</label>
+          <select id="filter-type" class="filter-select" aria-label="Filter by vehicle type">
+            <option value="all">All Types</option>
+            <option value="Pickup">Pickup</option>
+            <option value="Sedan">Sedan</option>
+            <option value="SUV">SUV</option>
+            <option value="Hatchback">Hatchback</option>
+            <option value="Crossover">Crossover</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-fuel" class="filter-label">Fuel</label>
+          <select id="filter-fuel" class="filter-select" aria-label="Filter by fuel type">
+            <option value="all">All Fuels</option>
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-sort" class="filter-label">Sort by</label>
+          <select id="filter-sort" class="filter-select" aria-label="Sort vehicles">
+            <option value="default">Default</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+            <option value="name-asc">Name A–Z</option>
+          </select>
+        </div>
+
+        <button class="btn-reset" id="btn-reset" aria-label="Reset all filters">
+          Reset
+        </button>
+
+      </div>
+    </section>
+
+    <section class="fleet-section" aria-labelledby="fleet-heading">
+      <div class="fleet-container">
+
+        <p class="results-count" id="results-count" aria-live="polite">
+          Showing <span id="count-num">6</span> vehicles
+        </p>
+
+        <div class="vehicle-grid" id="vehicle-grid" role="list">
+
+          <article class="v-card" role="listitem"
+            data-name="Toyota Hilux"
+            data-type="Pickup"
+            data-fuel="Diesel"
+            data-price="8000"
+            data-seats="5"
+            data-transmission="4WD Manual">
+            <div class="v-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=700&q=80"
+                alt="Toyota Hilux pickup truck available for rent"
+                class="v-img" loading="lazy"
+              />
+              <span class="badge-type">Pickup</span>
+              <span class="badge-price">Rs. 8,000/day</span>
+            </div>
+            <div class="v-info">
+              <h2 class="v-name">Toyota Hilux</h2>
+              <ul class="v-specs" aria-label="Specifications">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  5
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+                  Diesel
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                  4WD Manual
+                </li>
+              </ul>
+              <div class="v-actions">
+                <button class="btn-details" aria-label="View details for Toyota Hilux" data-car="Toyota Hilux">Details</button>
+                <a href="register.html" class="btn-book-card" aria-label="Book the Toyota Hilux">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="v-card" role="listitem"
+            data-name="Honda City"
+            data-type="Sedan"
+            data-fuel="Petrol"
+            data-price="4500"
+            data-seats="5"
+            data-transmission="Automatic">
+            <div class="v-img-wrap">
+              <img
+                src="https://imgd.aeplcdn.com/664x374/n/cw/ec/134287/city-exterior-right-front-three-quarter-2.png?isig=0&q=80.jpg"
+                alt="Honda City sedan available for rent"
+                class="v-img" loading="lazy"
+              />
+              <span class="badge-type">Sedan</span>
+              <span class="badge-price">Rs. 4,500/day</span>
+            </div>
+            <div class="v-info">
+              <h2 class="v-name">Honda City</h2>
+              <ul class="v-specs" aria-label="Specifications">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  5
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+                  Petrol
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                  Automatic
+                </li>
+              </ul>
+              <div class="v-actions">
+                <button class="btn-details" aria-label="View details for Honda City" data-car="Honda City">Details</button>
+                <a href="register.html" class="btn-book-card" aria-label="Book the Honda City">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="v-card" role="listitem"
+            data-name="Mahindra Scorpio"
+            data-type="SUV"
+            data-fuel="Diesel"
+            data-price="6500"
+            data-seats="7"
+            data-transmission="Manual">
+            <div class="v-img-wrap">
+              <img
+                src="https://imgd.aeplcdn.com/664x374/n/cw/ec/40432/scorpio-n-exterior-right-front-three-quarter-4.png?isig=0&q=80.jpg"
+                alt="Mahindra Scorpio SUV available for rent"
+                class="v-img" loading="lazy"
+              />
+              <span class="badge-type">SUV</span>
+              <span class="badge-price">Rs. 6,500/day</span>
+            </div>
+            <div class="v-info">
+              <h2 class="v-name">Mahindra Scorpio</h2>
+              <ul class="v-specs" aria-label="Specifications">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  7
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+                  Diesel
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                  Manual
+                </li>
+              </ul>
+              <div class="v-actions">
+                <button class="btn-details" aria-label="View details for Mahindra Scorpio" data-car="Mahindra Scorpio">Details</button>
+                <a href="register.html" class="btn-book-card" aria-label="Book the Mahindra Scorpio">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="v-card" role="listitem"
+            data-name="Suzuki Swift"
+            data-type="Hatchback"
+            data-fuel="Petrol"
+            data-price="3000"
+            data-seats="5"
+            data-transmission="Automatic">
+            <div class="v-img-wrap">
+              <img
+                src="https://www.nepaldrives.com/uploads/editor/2026-02-25/115913846Suzuki-Swift-1-Price-Nepal-.jpg"
+                alt="Suzuki Swift hatchback available for rent"
+                class="v-img" loading="lazy"
+              />
+              <span class="badge-type">Hatchback</span>
+              <span class="badge-price">Rs. 3,000/day</span>
+            </div>
+            <div class="v-info">
+              <h2 class="v-name">Suzuki Swift</h2>
+              <ul class="v-specs" aria-label="Specifications">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  5
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+                  Petrol
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                  Automatic
+                </li>
+              </ul>
+              <div class="v-actions">
+                <button class="btn-details" aria-label="View details for Suzuki Swift" data-car="Suzuki Swift">Details</button>
+                <a href="register.html" class="btn-book-card" aria-label="Book the Suzuki Swift">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="v-card" role="listitem"
+            data-name="Ford Everest"
+            data-type="SUV"
+            data-fuel="Diesel"
+            data-price="9000"
+            data-seats="7"
+            data-transmission="4WD Auto">
+            <div class="v-img-wrap">
+              <img
+                src="https://cdn.motor1.com/images/mgl/lE29nl/s3/ford-everest-tremor.jpg"
+                alt="Ford Everest SUV 4WD available for rent"
+                class="v-img" loading="lazy"
+              />
+              <span class="badge-type">SUV</span>
+              <span class="badge-price">Rs. 9,000/day</span>
+            </div>
+            <div class="v-info">
+              <h2 class="v-name">Ford Everest</h2>
+              <ul class="v-specs" aria-label="Specifications">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  7
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+                  Diesel
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                  4WD Auto
+                </li>
+              </ul>
+              <div class="v-actions">
+                <button class="btn-details" aria-label="View details for Ford Everest" data-car="Ford Everest">Details</button>
+                <a href="register.html" class="btn-book-card" aria-label="Book the Ford Everest">Book</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="v-card" role="listitem"
+            data-name="Hyundai Creta"
+            data-type="Crossover"
+            data-fuel="Petrol"
+            data-price="5500"
+            data-seats="5"
+            data-transmission="Automatic">
+            <div class="v-img-wrap">
+              <img
+                src="https://carnepal.com/wp-content/uploads/2018/08/Hyundai-Creta.jpg"
+                alt="Hyundai Creta crossover available for rent"
+                class="v-img" loading="lazy"
+              />
+              <span class="badge-type">Crossover</span>
+              <span class="badge-price">Rs. 5,500/day</span>
+            </div>
+            <div class="v-info">
+              <h2 class="v-name">Hyundai Creta</h2>
+              <ul class="v-specs" aria-label="Specifications">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  5
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17"/><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+                  Petrol
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                  Automatic
+                </li>
+              </ul>
+              <div class="v-actions">
+                <button class="btn-details" aria-label="View details for Hyundai Creta" data-car="Hyundai Creta">Details</button>
+                <a href="register.html" class="btn-book-card" aria-label="Book the Hyundai Creta">Book</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="empty-state" id="empty-state" hidden aria-live="polite">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p>No vehicles found matching your filters.</p>
+          <button class="btn-reset" id="btn-reset-empty">Reset Filters</button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div class="modal-overlay" id="modal-overlay" role="dialog"
+    aria-modal="true" aria-labelledby="modal-car-name" hidden>
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Close vehicle details">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <img class="modal-img" id="modal-img" src="" alt="" />
+      <div class="modal-body">
+        <div class="modal-badges">
+          <span class="badge-type" id="modal-type"></span>
+          <span class="badge-price" id="modal-price"></span>
+        </div>
+        <h2 class="modal-car-name" id="modal-car-name"></h2>
+        <ul class="modal-specs" id="modal-specs"></ul>
+        <a href="register.html" class="btn-book-card modal-book">Book This Vehicle</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-main">
+
+      <div class="footer-brand">
+        <a href="home.html" class="footer-logo" aria-label="HollowManRent – Home">
+          <span class="footer-logo-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="2"/>
+              <path d="M16 8h4l3 3v5h-7V8z"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </span>
+          <span class="footer-logo-text">HOLLOW<span class="footer-logo-accent">MAN</span>RENT</span>
+        </a>
+        <p class="footer-tagline">Nepal's trusted car rental service. Reliable vehicles for every journey across the country.</p>
+        <div class="footer-socials" aria-label="Follow us on social media">
+          <a href="#" class="footer-social-btn" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="footer-social-btn" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="footer-social-btn" aria-label="Twitter / X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" class="footer-social-btn" aria-label="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-col-heading">Quick Links</h3>
+        <ul class="footer-col-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="listings.html">Our Fleet</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="blog.html">Testimonials</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-col-heading">Services</h3>
+        <ul class="footer-col-links">
+          <li><a href="booking.html">Car Booking</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-col-heading">Contact</h3>
+        <ul class="footer-contact-list">
+          <li>
+            <span class="footer-contact-icon" aria-label="Phone">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.96 5.96l.96-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <a href="tel:+9779847653175">+977 9847653175</a>
+          </li>
+          <li>
+            <span class="footer-contact-icon" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <a href="mailto:ashwintamang135@gmail.com" class="info-value info-value--email">ashwintamang135@gmail.com</a>
+          </li>
+          <li>
+            <span class="footer-contact-icon" aria-label="Address">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <span>Thamel Marg, Kathmandu, Nepal</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom-outer">
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 HollowManRent Nepal. All rights reserved.</p>
+        <nav class="footer-legal" aria-label="Legal links">
+          <a href="#">Terms &amp; Conditions</a>
+        </nav>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="js/shared.js"></script>
+  <script src="js/listings.js"></script>
+</body>
+</html>
